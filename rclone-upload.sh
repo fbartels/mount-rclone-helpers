@@ -2,8 +2,8 @@
 
 ## Defaults
 SOURCECLEARTEXT=/backup/data		# name of directory that should be backed up
-RCLONEREMOTE=crypt					# name of rclone remote to upload to
-RCLONEULTYPE=sync					# type of upload. can be sync or copy
+RCLONEREMOTE=crypt:					# name of rclone remote to upload to
+RCLONEULTYPE=check					# type of upload. can be check, sync or copy
 
 ## no need to change anything below
 
