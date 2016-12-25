@@ -4,6 +4,7 @@
 SOURCECLEARTEXT=/backup/data		# name of directory that should be backed up
 RCLONEREMOTE=crypt:					# name of rclone remote to upload to
 RCLONEULTYPE=check					# type of upload. can be check, sync or copy
+RCLONETRANSFERS=4					# amount of simultaneous uploads
 
 ## no need to change anything below
 
@@ -25,4 +26,4 @@ if [ ! "$(which rclone)" ]; then
 fi
 
 # script logic begins here
-rclone --verbose --transfers=1 $RCLONEULTYPE $SOURCECLEARTEXT $RCLONEREMOTE
+rclone --verbose --transfers=$RCLONETRANSFERS $RCLONEULTYPE $SOURCECLEARTEXT $RCLONEREMOTE
