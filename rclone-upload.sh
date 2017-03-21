@@ -26,4 +26,4 @@ if [ ! "$(which rclone)" ]; then
 fi
 
 # script logic begins here
-rclone --verbose --checksum --no-traverse --no-update-modtime --transfers=$RCLONETRANSFERS $RCLONEULTYPE $SOURCECLEARTEXT $RCLONEREMOTE
+rclone --verbose --checksum --no-update-modtime --transfers=$RCLONETRANSFERS $RCLONEULTYPE $SOURCECLEARTEXT $RCLONEREMOTE
