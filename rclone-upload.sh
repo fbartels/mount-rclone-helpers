@@ -25,5 +25,7 @@ if [ ! "$(which rclone)" ]; then
 	exit 1
 fi
 
+RCLONECHECKERS=$(expr $RCLONETRANSFERS \* 4)
+
 # script logic begins here
-rclone --verbose --checksum --no-update-modtime --transfers=$RCLONETRANSFERS $RCLONEULTYPE $SOURCECLEARTEXT $RCLONEREMOTE
+rclone --verbose --checksum --no-update-modtime --transfers=$RCLONETRANSFERS --checkers=$RCLONECHECKERS $RCLONEULTYPE $SOURCECLEARTEXT $RCLONEREMOTE
